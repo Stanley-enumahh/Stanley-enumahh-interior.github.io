@@ -920,21 +920,21 @@ cursor: pointer;
  justify-content: space-between;
  align-items: center;
 }
-.contact-title{
+/*.contact-title{
   transform: translateX(-300px);
   transition: 1s ease-in-out;
 }
 .contact-title-appear{
   transform: translateX(0px);
-}
+}*/
 .contact-text p{
   line-break: 1.4rem;
 }
-.contact-text-p{
+/*.contact-text-p{
   opacity: 0;
   transition: 0.7s ease-in-out;
   transition-delay: 1s;
-}
+}*/
 .contact-text-p-appear{
   opacity: 1;
 }
@@ -950,7 +950,7 @@ cursor: pointer;
 .single p{
   font-size: 14px;
 }
-.contact-middle-title{
+/*.contact-middle-title{
   transform: translateX(-1000px);
   transition: 1s ease-in-out;
   transition-delay: 1.3s;
@@ -965,7 +965,7 @@ cursor: pointer;
 }
 .contact-middle-text-appear{
   opacity: 1;
-}
+}*/
 .contact-middle-text p{
   line-height: 2rem;
 }
@@ -1004,14 +1004,14 @@ cursor: pointer;
 #let-talk-btn:hover i{
   color: black;
 }
-.contact-right-title{
+/*.contact-right-title{
   transform: translateX(400px);
   transition: 1s ease-in-out;
   transition-delay: 1.7s;
 }
 .contact-right-title-appear{
   transform: translateX(0px);
-}
+}*/
 .follow-me h3{
  margin-bottom: 15px;
 }
