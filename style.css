@@ -969,7 +969,7 @@ cursor: pointer;
 .contact-middle-text p{
   line-height: 2rem;
 }
-.contact-btn{
+/*.contact-btn{
   width: 90%;
   opacity: 0;
   transition: 0.6s ease-in-out;
@@ -977,7 +977,7 @@ cursor: pointer;
 }
 .contact-btn-appear{
   opacity: 1;
-}
+}*/
 #let-talk-btn{
   gap: 0.8rem;
   display: flex;
