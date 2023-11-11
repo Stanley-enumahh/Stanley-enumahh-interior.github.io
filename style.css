@@ -908,7 +908,7 @@ cursor: pointer;
   height: 60vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .contact-us-box{
   width: 90%;
