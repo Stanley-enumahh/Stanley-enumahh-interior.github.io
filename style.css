@@ -472,13 +472,15 @@ html{
 }
 
 
+
+
 /*services*/
 .Services{
   width: 100%;
   height: 60vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .services-box{
   margin-top: 60px;
@@ -663,7 +665,7 @@ transition-delay: 0.5s;
   display: flex;
   justify-content: center;
   background-color: #efefef;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .project-box{
   width: 90%;
@@ -908,7 +910,7 @@ cursor: pointer;
   height: 60vh;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .contact-us-box{
   width: 90%;
