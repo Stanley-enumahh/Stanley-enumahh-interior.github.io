@@ -36,19 +36,11 @@ html{
   box-shadow: 2px 4px 7px rgba(0,0,0,0.4);
   overflow-x: hidden;
 }
-
-
 .logo{
   margin-left: 100px;
   color: #000;
-  opacity: 0;
-  transform: translateX(-300px);
-  transition: 0.8s ease-in-out;
-  position: relative;
-}
-.logo-appear{
   opacity: 1;
-  transform: translate(0);
+  position: relative;
 }
 .logo::before {
   content: "";
@@ -71,12 +63,6 @@ html{
   align-items: center;
   flex-direction: row;
   margin-right: 100px;
-  transform: translateX(600px);
-  transition: 0.8s ease-in-out;
-  transition-delay: 0.5s;
-}
-.navigation-appear{
-  transform: translate(0);
 }
 
 .navigation ul {
@@ -85,15 +71,13 @@ html{
   flex-direction: row;
   gap: 1.4rem;
 }
-
 .navigation ul li a {
   color: #000;
   text-decoration: none;
   padding: 7px 10px;
-  font-size: 14px;
+  font-size: .8rem;
   transition: 0.5s ease-in-out;
 }
-
 .navigation ul li a:hover {
   background-color: #ffdf00;
   border-radius: 5px;
@@ -101,7 +85,6 @@ html{
 .top-navigation{
   display: none;
 }
-
 .toggle {
   margin-right: 40px;
   display: none;
@@ -113,7 +96,6 @@ html{
   z-index: 10;
   position: relative;
 }
-
 #togglebtn::before {
   position: absolute;
   content: '';
@@ -148,37 +130,32 @@ html{
 
 .banner{
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
 }
 .banner-content{
-  height: 90%;
+  height: 100%;
   width: 48%;
   margin-left: 100px;
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 2rem;
 }
-
-
 .banner-heading{
-  margin-top: 150px;
-  font-size: 43px;
+  margin-top: 170px;
   color: #fff;
-  opacity: 0;
-  transition: 0.8s;
-  transition-delay: 1.2s;
 }
-.banner-heading-appear{
-  opacity: 1;
+.banner-heading h1{
+  font-size: 4rem;
 }
 .banner-heading span{
   color: #ffdf00;
 }
 .banner-text{
-  margin-top: 30px;
   color: #fff;
 }
 .banner-text p{
@@ -187,24 +164,17 @@ html{
 
 .banner-btn-box{
   width: 100%;
-  margin-top: 50px;
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
-  transform: translateY(500px);
-  transition-delay: 0.4s;
-  transition: 1s ease-in-out;
-}
-.banner-btn-box-appear{
-  transform: translate(0);
 }
 .banner-btn {
   background: transparent;
   border: 2px solid #fff;
   outline: none;
-  padding: 16px 20px;
+  padding: 18px 20px;
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
@@ -234,7 +204,6 @@ html{
   100%{
     transform: scale(1);
   }
-  
 }
 
 .scroll-up a{
@@ -251,8 +220,22 @@ html{
     position: fixed;
   }
 
+
+  @media screen and (max-width:1025px){
+  .top-bar{
+  height: 50px;
+  }
+  .banner-heading h1{
+    font-size: 3rem;
+  }
+  .banner-text p{
+    font-size: 1rem;
+  }
+  .banner-btn {
+    padding: 15px 19px;
+  }
+  }
 @media screen and (max-width:950px){
- 
   .Home-container{
     height: 100vh;
   }
@@ -270,7 +253,7 @@ html{
     display: none;
     height: 0;
     position: fixed;
-    top: 60px;
+    top: 50px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -308,12 +291,14 @@ html{
   .banner{
     height: 100vh;
   }
-  .banner-heading{
-    margin-top: 80px;
+  .banner-content{
+    gap: 1.5rem;
   }
-  
+  .banner-text p{
+    font-size: 1rem;
+  }
 }
-@media screen and (max-width:720px){
+@media screen and (max-width:770px){
   .logo{
     margin-left: 50px;
   }
@@ -328,6 +313,24 @@ html{
     display: flex;
     position: fixed;
   }
+  .banner-content{
+    width: 58%;
+    justify-content: center;
+    margin-left: 50px;
+  }
+  .banner-heading{
+    margin-top: 0;
+  }
+  .banner-heading h1{
+    font-size: 3rem;
+  }
+  .banner-btn-box{
+    gap: 2rem;
+  }
+  .banner-btn {
+    padding: 11px 18px;
+    font-size: .9rem;
+  }
 }
 @media screen and (max-width:695px){
   .logo::before{
@@ -338,25 +341,13 @@ html{
   }
 }
 @media screen and (max-width:580px){
-  .banner-content{
-    height: 100%;
-    margin-left: 50px;
-    margin-top: 120px;
-  }
   .toggle {
     margin-right: 20px;
   }
-  .banner-heading{
-    margin-top: 70px;
-  }
   .banner-btn-box{
-    width: 90%;
+    width: 100%;
     gap: 1rem;
   }
-  .banner-btn {
-    padding: 10px 5px;
-  }
-
 }
 @media screen and (max-width:550px){
   .Home-container{
@@ -367,9 +358,8 @@ html{
     width: 70%;
     margin-left: 30px;
   }
-  .banner-heading{
-    margin-top: 40px;
-    font-size: 25px;
+  .banner-heading h1{
+    font-size: 2.7rem;
   }
   .logo{
     margin-left: 25px;
@@ -385,44 +375,53 @@ html{
     font-size: 30px;
   }
   .banner-btn-box{
-    width: 90%;
+    width: 100%;
     gap: 1rem;
   }
   .banner-btn {
-    padding: 6px 3px;
-    font-size: 14px;
+    padding: 10px 18px;
+    font-size: .8rem;
   }
   .top-navigation ul li a {
     color: #000;
     text-decoration: none;
     padding: 7px 10px;
-    font-size: 14px;
+    font-size: .8rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
   }
 }
-
+@media screen and (max-width:430px){
+  .banner-btn {
+    padding: 14px 10px;
+  }
+}
+@media screen and (max-width:375px){
+  .banner-heading{
+    font-size: 20px;
+  }
+  .banner-btn {
+    padding: 14px 7px;
+    font-size: .8rem;
+  }
+}
 @media screen and (max-width:350px){
   .Home-container{
     height: 100vh;
   }
   .banner{
-    height: 80%;
+    height: 100%;
   }
   .banner-content{
     height: 100%;
-    width: 60%;
+    width: 80%;
     margin-left: 20px;
   }
-  .banner-heading{
-    margin-top: 40px;
-    font-size: 24px;
-  }
-  .banner-text{
-    margin-top: 15px;
+  .banner-heading h1{
+    font-size: 2.2rem;
   }
   .banner-text p{
-    line-height: 1.2rem;
+    line-height: 1.3rem;
     font-size: 14px;
   }
   .logo{
@@ -443,18 +442,14 @@ html{
   }
   .banner-btn-box{
     width: 60%;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
   }
-  .banner-btn {
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    padding: 10px 2px;
-    font-size: 12px;
+  .banner-btn{
+    padding: 10px 3px;
   }
+
   .scroll-up{
     bottom: 50px;
     right: 25px;
@@ -468,7 +463,6 @@ html{
     border:  1px solid #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
-
 }
 
 
@@ -480,7 +474,7 @@ html{
   height: 60vh;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .services-box{
   margin-top: 60px;
@@ -510,22 +504,14 @@ justify-content: center;
   display: flex;
 align-items: center;
 justify-content: flex-end;
-transform: translateX(300px);
-opacity: 0;
-transition: 0.8s ease-in-out;
-transition-delay: 0.2s;
-}
-.view-all-appear{
-  opacity: 1;
-  transform: translateX(0);
 }
 #view-all-btn{
   gap: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
-  padding: 4px 6px;
+  font-size: .7rem;
+  padding: 8px 10px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -554,28 +540,11 @@ transition-delay: 0.2s;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2.5rem;
-  transform: translateY(500px);
-  opacity: 0;
-  transition: 1.2s ease-in-out;
-  transition-delay: 0.4s;
-}
-.services-content-appear{
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.heading{
-transform: translateX(-300px);
-transition: 0.8s ease-in-out;
-transition-delay: 0.5s;
-}
-.heading-appear{
-  transform: translate(0);
 }
 
 .first-service{
   height: 90%;
-  flex-basis: 380px;
+  flex-basis: 300px;
   flex-grow: 1;
   padding: 20px;
   display: flex;
@@ -596,7 +565,9 @@ transition-delay: 0.5s;
 .services-single-title span{
   color: #ffdf00;
 }
-
+.services-single-text p{
+  font-size: .9rem;
+}
 
 @media screen and (max-width:1430px){
   .Services{
@@ -680,50 +651,20 @@ transition-delay: 0.5s;
   flex-direction: column;
   gap: 2rem;
 }
-.project-title{
-  transform: translateX(-300px);
-  transition: 0.4s ease-in-out;
-  opacity: 0;
-}
-.project-title-appear{
-  transform: translateX(0);
-  opacity: 1;
-}
-.project-text{
-  transform: translateX(400px);
-  opacity: 0;
-  transition: 0.8s ease-in-out;
-  transition-delay: 0.5s;
-}
-.project-text-appear{
-  transform: translateX(0);
-  opacity: 1;
-}
 .project-text p{
-  line-height: 1.4rem;
-}
-
-.project-text p{
-  transform: translateX(0);
+  font-size: .9rem;
+  line-height: 1.5rem;
 }
 .project-btn{
-  width: 90%;
-  transform: translateX(-300px);
-  opacity: 0;
-  transition: 1s ease-in-out;
-  transition-delay: 1s;
-}
-.project-btn-appear{
-  transform: translateX(0);
-  opacity: 1;
+  width: 100%;
 }
 #view-all-project-btn{
   gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
-  padding: 8px 8px;
+  font-size: .7rem;
+  padding: 8px 10px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -773,15 +714,7 @@ height: 100%;
 height: 100%;
 object-fit: cover;
 box-shadow: 0 0 12px rgba(0,0,0,0.4);
-transform: scale(0.1);
-opacity: 0;
 transition: 0.8s ease-in-out;
-transition-delay: 1.5s;
-}
-
-.project-img-appear{
-  transform: scale(1);
-opacity: 1;
 }
 
 .project-icon{
@@ -920,23 +853,9 @@ cursor: pointer;
  justify-content: space-between;
  align-items: center;
 }
-/*.contact-title{
-  transform: translateX(-300px);
-  transition: 1s ease-in-out;
-}
-.contact-title-appear{
-  transform: translateX(0px);
-}*/
 .contact-text p{
-  line-break: 1.4rem;
-}
-/*.contact-text-p{
-  opacity: 0;
-  transition: 0.7s ease-in-out;
-  transition-delay: 1s;
-}*/
-.contact-text-p-appear{
-  opacity: 1;
+  font-size: .8rem;
+  line-height: 1.4rem;
 }
 .single{
   width: 34%;
@@ -948,43 +867,18 @@ cursor: pointer;
   gap: 1.5rem;
 }
 .single p{
-  font-size: 14px;
+  font-size: .8rem;
 }
-/*.contact-middle-title{
-  transform: translateX(-1000px);
-  transition: 1s ease-in-out;
-  transition-delay: 1.3s;
-}
-.contact-middle-title-appear{
-  transform: translateX(0px);
-}
-.contact-middle-text{
-  opacity: 0;
-  transition: 1s ease-in-out;
-  transition-delay: 1.5s;
-}
-.contact-middle-text-appear{
-  opacity: 1;
-}*/
 .contact-middle-text p{
   line-height: 2rem;
 }
-/*.contact-btn{
-  width: 90%;
-  opacity: 0;
-  transition: 0.6s ease-in-out;
-  transition-delay: 1.5s;
-}
-.contact-btn-appear{
-  opacity: 1;
-}*/
 #let-talk-btn{
   gap: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
-  padding: 8px 8px;
+  font-size: .8rem;
+  padding: 8px 10px;
   background-color: transparent;
   border: none;
   outline: none;
